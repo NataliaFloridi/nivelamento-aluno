@@ -17,4 +17,4 @@ puts
 puts "Desafio:"
 puts
 puts "- Se minha idade é de 1232 milhões de segundos, qual é minha idade em anos?"
-puts 1232000000 / (3600 * 24 * 365)
+puts 1232000000.0 / (3600 * 24 * 365)
