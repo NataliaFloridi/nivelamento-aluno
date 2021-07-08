@@ -8,7 +8,7 @@ um_ano = 12
 ano = 365
 decada = 10
 idade_natalia = 34
-idade = 1232000000
+idade = 1232000000.0
 expectativa_de_vida = 80
 chocolate = 5
 
