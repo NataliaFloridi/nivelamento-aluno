@@ -11,7 +11,7 @@ end
 
 puts "2. retornar a quantidade de minutos que tem em uma quantidade de décadas, que será um valor informado para a função"
 def calc_minutos_em_decadas(decadas)
-    minutos_em_decadas = 60 * 24 * 365 * decadas
+    minutos_em_decadas = 60 * 24 * 365 * 10 * decadas
     return minutos_em_decadas
 end
 
@@ -28,6 +28,10 @@ def calc_anos_em_segundos(anos)
 end
 
 puts calc_horas_em_anos(1)
+puts calc_anos_em_segundos(3)
+puts calc_minutos_em_decadas(1)
 puts calc_minutos_em_decadas(10)
+puts calc_idade_em_segundos(10)
 puts calc_idade_em_segundos(34)
+puts calc_anos_em_segundos(5)
 puts calc_anos_em_segundos(39)
