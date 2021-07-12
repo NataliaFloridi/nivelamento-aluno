@@ -22,9 +22,9 @@ def calc_idade_em_segundos(idade)
 end
 
 puts "4. retornar a quantidade de anos que tem em uma quantidade de segundos, que será um valor informado para a função"
-def calc_anos_em_segundos(anos)
-    anos_em_segundos = 3600 * 24 * 365 * anos
-    return anos_em_segundos
+def calc_segundos_em_anos(segundos)
+    segundos_em_anos = segundos / (3600.0 * 24.0 * 365.0)
+    return segundos_em_anos
 end
 
 puts calc_anos_em_horas(1)
@@ -33,5 +33,5 @@ puts calc_minutos_em_decadas(1)
 puts calc_minutos_em_decadas(10)
 puts calc_idade_em_segundos(10)
 puts calc_idade_em_segundos(34)
-puts calc_anos_em_segundos(5)
-puts calc_anos_em_segundos(39)
+puts calc_segundos_em_anos(89565230)
+puts calc_segundos_em_anos(1232000000)
