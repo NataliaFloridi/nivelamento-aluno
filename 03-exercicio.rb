@@ -28,7 +28,7 @@ def calc_anos_em_segundos(anos)
 end
 
 puts calc_horas_em_anos(1)
-puts calc_anos_em_segundos(3)
+puts calc_horas_em_anos(3)
 puts calc_minutos_em_decadas(1)
 puts calc_minutos_em_decadas(10)
 puts calc_idade_em_segundos(10)
