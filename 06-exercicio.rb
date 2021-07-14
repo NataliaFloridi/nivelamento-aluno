@@ -2,45 +2,42 @@
 
 def define_fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_de_ocupacao_leitos)
     
-    if taxa_de_vacinacao >= 0.0 && taxa_de_vacinacao <= 1.0 && fator_de_transmissao >= 0 && taxa_de_ocupacao_leitos >= 0.0 && taxa_de_ocupacao_leitos <= 1.0
-        
-        if taxa_de_vacinacao > 0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos < 0.5
-            return "FASE AZUL" 
-        elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos <= 0.5
-            return "FASE VERDE" 
-        elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.5 && taxa_de_ocupacao_leitos <= 0.65
-            return "FASE AMARELA" 
-        elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.65 && taxa_de_ocupacao_leitos <= 0.8
-            return "FASE LARANJA" 
-        elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao >= 1 && taxa_de_ocupacao_leitos > 0.8 && taxa_de_ocupacao_leitos <= 0.9
-            return "FASE VERMELHA" 
-        else 
-            return "FASE ROXA" 
-        end
-        
-    else
-        return nil
+    if taxa_de_vacinacao < 0.0 || taxa_de_vacinacao > 1.0 
+        return "Taxa de vacinação inválida. Digite valores entre 0.0 e 1.0."
+    elsif fator_de_transmissao < 0.0
+        return "Fator de transmissão inválida.  Digite valores a partir de 0."
+    elsif taxa_de_ocupacao_leitos < 0.0 || taxa_de_ocupacao_leitos > 1.0
+        return "Taxa de ocupação de leitos inválida.  Digite valores entre 0.0 e 1.0"
     end
-    
+        
+    if taxa_de_vacinacao > 0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos < 0.5
+        return "FASE AZUL" 
+    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos <= 0.5
+        return "FASE VERDE" 
+    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.5 && taxa_de_ocupacao_leitos <= 0.65
+        return "FASE AMARELA" 
+    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.65 && taxa_de_ocupacao_leitos <= 0.8
+        return "FASE LARANJA" 
+    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao >= 1 && taxa_de_ocupacao_leitos > 0.8 && taxa_de_ocupacao_leitos <= 0.9
+        return "FASE VERMELHA" 
+    else 
+        return "FASE ROXA" 
+    end
+
 end
 
-print "Por favor, digite a taxa de vacinação: "
-taxa_de_vacinacao = gets.to_f
+#DADOS VÁLIDOS
+puts define_fase_pandemica(0.9, 0.2, 0.2) #AZUL
+puts define_fase_pandemica(0.8, 0.5, 0.5) #VERDE
+puts define_fase_pandemica(0.7, 0.2, 0.65) #AMARELA
+puts define_fase_pandemica(0.8, 0.5, 0.8) #LARANJA
+puts define_fase_pandemica(0.8, 1, 0.9 ) #VERMELHA
+puts define_fase_pandemica(0.9, 3, 1) #ROXA
 
-print "Por favor, digite o fator de transmissão: "
-fator_de_transmissao = gets.to_f
-
-print "Por favor, digite a taxa de ocupação de leitos: "
-taxa_de_ocupacao_leitos = gets.to_f
-
-fase_pandemica = define_fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_de_ocupacao_leitos)
-
-
-if fase_pandemica == nil
-    puts "Os valores digitados são inválidos!"
-else
-    puts "A fase pandêmica nesse momento é a : " + fase_pandemica
-end
+#DADOS INVÁLIDOS
+puts define_fase_pandemica(10, 0.2, 0.2) #TAXA DE VACINAÇÃO
+puts define_fase_pandemica(0.9, -2, 0.2) #FATOR DE TRANSMISSÃO
+puts define_fase_pandemica(0.9, 0.2, 3) #TAXA DE OCUPAÇÃO DE LEITOS
 
 # Estamos vivendo uma pandemia e o governador pediu um sistema para indicar qual a cor da fase pandêmica em que está o Estado.
 
