@@ -14,7 +14,7 @@ def define_fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_de_ocupa
             return "FASE LARANJA" 
         elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao >= 1 && taxa_de_ocupacao_leitos > 0.8 && taxa_de_ocupacao_leitos <= 0.9
             return "FASE VERMELHA" 
-        else taxa_de_vacinacao <=0.8 && fator_de_transmissao >= 1 && taxa_de_ocupacao_leitos > 0.9
+        else 
             return "FASE ROXA" 
         end
         
