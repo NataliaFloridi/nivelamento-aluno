@@ -10,20 +10,20 @@ def define_fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_de_ocupa
         return "Taxa de ocupação de leitos inválida.  Digite valores entre 0.0 e 1.0"
     end
         
-    if taxa_de_vacinacao > 0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos < 0.5
+    if taxa_de_vacinacao > 0.8 
         return "FASE AZUL" 
-    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos <= 0.5
+    elsif fator_de_transmissao < 1 && taxa_de_ocupacao_leitos <= 0.5
         return "FASE VERDE" 
-    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.5 && taxa_de_ocupacao_leitos <= 0.65
+    elsif fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.5 && taxa_de_ocupacao_leitos <= 0.65
         return "FASE AMARELA" 
-    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.65 && taxa_de_ocupacao_leitos <= 0.8
+    elsif fator_de_transmissao < 1 && taxa_de_ocupacao_leitos > 0.65 && taxa_de_ocupacao_leitos <= 0.8
         return "FASE LARANJA" 
-    elsif taxa_de_vacinacao <=0.8 && fator_de_transmissao >= 1 && taxa_de_ocupacao_leitos > 0.8 && taxa_de_ocupacao_leitos <= 0.9
+    elsif fator_de_transmissao >= 1 || taxa_de_ocupacao_leitos > 0.8 && taxa_de_ocupacao_leitos <=0.9
         return "FASE VERMELHA" 
-    else 
+    elsif taxa_de_ocupacao_leitos > 0.9
         return "FASE ROXA" 
     end
-
+    
 end
 
 #DADOS VÁLIDOS
@@ -32,7 +32,15 @@ puts define_fase_pandemica(0.8, 0.5, 0.5) #VERDE
 puts define_fase_pandemica(0.7, 0.2, 0.65) #AMARELA
 puts define_fase_pandemica(0.8, 0.5, 0.8) #LARANJA
 puts define_fase_pandemica(0.8, 1, 0.9 ) #VERMELHA
-puts define_fase_pandemica(0.9, 3, 1) #ROXA
+puts define_fase_pandemica(0.2, 0.9, 0.99) #ROXA
+
+
+puts define_fase_pandemica(1.0, 1, 0.9)#AZUL
+puts define_fase_pandemica(0.1, 0.7, 0.5)#VERDE
+puts define_fase_pandemica(0.1, 0.8, 0.55)#AMARELA
+puts define_fase_pandemica(0.1, 0.9, 0.70) #LARANJA
+puts define_fase_pandemica(0.1, 1.5, 0.5)#VERMELHA
+puts define_fase_pandemica(0.1, 0.9, 0.95)#ROXA
 
 #DADOS INVÁLIDOS
 puts define_fase_pandemica(10, 0.2, 0.2) #TAXA DE VACINAÇÃO
