@@ -39,7 +39,7 @@ fase_pandemica = define_fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, 
 if fase_pandemica == nil
     puts "Os valores digitados são inválidos!"
 else
-    puts "A fase pandêmica nesse momento é a : " + fase_pandemica.to_s
+    puts "A fase pandêmica nesse momento é a : " + fase_pandemica
 end
 
 # Estamos vivendo uma pandemia e o governador pediu um sistema para indicar qual a cor da fase pandêmica em que está o Estado.
