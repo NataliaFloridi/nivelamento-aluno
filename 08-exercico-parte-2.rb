@@ -24,4 +24,4 @@ def calcular_mmc(primeiro_numero, segundo_numero)
 
 end
 
-puts calcular_mmc(primeiro_numero,segundo_numero)
+puts "O MMC de " + primeiro_numero.to_s + " e " + segundo_numero.to_s + " = " + (calcular_mmc(primeiro_numero,segundo_numero)).to_s
