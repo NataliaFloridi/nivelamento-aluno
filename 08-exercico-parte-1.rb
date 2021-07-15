@@ -5,7 +5,7 @@
 print "Calcule a taboada!"
 puts
 print "Digite um número: "
-numero= gets.chomp.to_i
+numero = gets.chomp.to_i
 
 for n in (1..10)
     puts numero.to_s + "x" + n.to_s + "=" + (numero * n).to_s
