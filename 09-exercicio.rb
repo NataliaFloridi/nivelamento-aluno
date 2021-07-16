@@ -9,7 +9,7 @@ puts "(" + numero.to_s + ")"
 
 chute = gets.chomp
 
-chutes = 1
+chutes = 0
 
 while chute.to_i != numero
 
@@ -45,7 +45,7 @@ while chute.to_i != numero
 end 
 
 if chute.to_i == numero
-
+    chutes = chutes + 1
     puts "Acertou! O número é " + chute.to_s
     puts "Você acertou após tentar " + chutes.to_s + " vezes"
 
