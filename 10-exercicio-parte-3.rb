@@ -16,9 +16,6 @@ for linha in (1..5)
     for c in (1.. linha)
         print "*"
     end
-    for d in (1..linha)
-        print " "
-    end
     puts
 end 
 
@@ -41,9 +38,6 @@ for linha in (1..8)
     end
     for g in (1...linha)
         print "*"
-    end
-    for h in (1..linha)
-        print " "
     end
     puts
 end 
