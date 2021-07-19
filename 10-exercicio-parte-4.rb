@@ -10,15 +10,25 @@
 # *******_*_*******
 # ********_********
 
-linha = 0
-for a in (1..1)
-    print "_"
-    linha + 1
-  
-    for b in (1...10)
+for linha in (1..9)
+
+    for a in (2..linha)
         print "*"
     end
-
-    puts "_"
-    puts "*"
+    for b in (1..1)
+        print "_"
+    end
+    for c in (linha..8)
+        print "*"
+    end
+    for d in (linha..7)
+        print "*"
+    end
+    for e in (1..1)
+        print "_"
+    end
+    for f in (2..linha)
+        print "*"
+    end
+    puts
 end 

@@ -7,16 +7,16 @@
 
 for linha in (1..5)
 
-    for coluna in (linha..5)
+    for a in (linha..5)
         print " "
     end
-    for coluna in (1..linha)
+    for b in (1..linha)
         print "*"
     end
-    for coluna in (1.. linha)
+    for c in (1.. linha)
         print "*"
     end
-    for coluna in (1..linha)
+    for d in (1..linha)
         print " "
     end
     puts
@@ -33,16 +33,16 @@ end
     
 for linha in (1..8)
 
-    for coluna in (linha..8)
+    for e in (linha..8)
         print " "
     end
-    for coluna in (1..linha)
+    for f in (1..linha)
         print "*"
     end
-    for coluna in (1...linha)
+    for g in (1...linha)
         print "*"
     end
-    for coluna in (1..linha)
+    for h in (1..linha)
         print " "
     end
     puts
