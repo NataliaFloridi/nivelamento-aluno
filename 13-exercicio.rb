@@ -24,10 +24,11 @@ end
 def remove_da_posicao(array, posicao_alvo)
     if posicao_alvo < array.size && posicao_alvo != 0 && posicao_alvo != array.size
         novo_array = []
+        n2 = 0
         for n in (0..array.size-1)
             if n != posicao_alvo
-                novo_array[n] = array[n]
-                
+                novo_array[n2] = array[n]
+                n2 = n2 + 1
             end
         end    
         return novo_array
