@@ -3,7 +3,7 @@
 def menor_maior(array)
     novo_array = []
 
-    for n in (0...array.size)
+    for n in (0...array.size - 1)
         if n == 0
             menor = array[n]
             maior = array[n]
@@ -16,8 +16,8 @@ def menor_maior(array)
         end
     end    
 
-    novo_array[1] = menor
-    novo_array[2] = maior
+    novo_array[0] = menor
+    novo_array[1] = maior
     return novo_array
 end
 
