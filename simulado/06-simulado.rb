@@ -2,12 +2,14 @@
 
 def menor_maior(array)
     novo_array = []
-
-    for n in (0...array.size)
+    maior = array[0]
+    menor = array[0]
+    
+    for n in (0..array.size-1)
         
-        if array[n] < 0
+        if array[n] < menor 
             menor = array[n]
-        elsif array[n] > 0
+        elsif array[n] > maior
             maior = array[n]
         end
  

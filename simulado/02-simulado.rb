@@ -10,7 +10,7 @@ def negativos_positivos(array)
     positivos = 0
     negativos_positivos = []
 
-    for n in (0...array.size)
+    for n in (0..array.size-1)
         if array[n] < 0
             negativos = negativos + 1
         elsif array[n] == 0

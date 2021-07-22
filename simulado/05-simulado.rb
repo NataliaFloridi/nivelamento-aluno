@@ -8,18 +8,16 @@ array = [10, 0, -1, -500, 20, 100]
 
 def mediana(array)
     array_ordenado = array.sort()
-    return array_ordenado
 
-    for n in (0..array_ordenado.size-1)
-        valor = array_ordenado[n] % 2
-
-        if valor == 0
-            print "par"
-        else
-            print "impar"
-        end        
-    end
+    if array_ordenado % 2 == 0 # par
+        numero_1 = array_ordenado[(array_ordenado.size / 2) - 1]
+        numero_2 = array_ordenado[array_ordenado.size / 2]
+        return resultado
+    else # impar
+        resultado = array_ordenado[array_ordenado.size / 2]
+        return resultado
+    end        
 end
 
-# puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
-# puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
+puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
+puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0

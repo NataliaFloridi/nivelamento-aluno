@@ -18,9 +18,9 @@
 def imprimir_tabela(numero)
     if numero <= 0
         puts "ARGUMENTO INVÁLIDO"
-    elsif
-        for n in (1..numero)
-            for n1 in (1..numero)
+    else
+        for n in (1..numero) #linha
+            for n1 in (1..n) #coluna
                 print n1 * n
             end
             puts
