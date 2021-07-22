@@ -10,11 +10,13 @@ def altura_escada(altura)
             array[i] = "_" * (altura - 1) + "#" * i
             altura = altura - 1
         end
+        return array
+    else
+        return array
     end
-    return array
 
 end
-
+puts(altura_escada(0))
 puts(altura_escada(1))
 # deve imprimir
 #
