@@ -1,15 +1,38 @@
-) As árvores utópicas crescem de uma forma particular, em dois ciclos:
-A cada primavera, dobram seu tamanho.
-A cada verão, crescem um metro.
-Se uma árvore utópica é plantada com um metro no final do outono, qual seria sua altura depois de N ciclos?
-Exemplo:
-Se N = 0, altura será 1 metro (não cresceu nada)
-Se N = 1, altura será 2 metros (dobrou a altura na primavera)
-Se N = 2, altura será 3 metros (cresceu mais 1 metro no verão)
-Se N = 3, altura será 6 metros (dobrou a altura na primavera seguinte)
-E assim por diante...
-Defina a função “altura_arvore_utopica”, que recebe a altura inicial da árvore utópica plantada no final do outono e a quantidade de ciclos de crescimento, e que retorne a altura resultante após a quantidade de ciclos de crescimento informada.
-Valide a altura inicial (que não pode ser zero ou menor) e a quantidade de ciclos (que não pode ser negativo). Caso a validação falhar, a função deve retornar nil.
+# As árvores utópicas crescem de uma forma particular, em dois ciclos:
+# A cada primavera, dobram seu tamanho.
+# A cada verão, crescem um metro.
+# Se uma árvore utópica é plantada com um metro no final do outono, qual seria sua altura depois de N ciclos?
+# Exemplo:
+# Se N = 0, altura será 1 metro (não cresceu nada)
+# Se N = 1, altura será 2 metros (dobrou a altura na primavera)
+# Se N = 2, altura será 3 metros (cresceu mais 1 metro no verão)
+# Se N = 3, altura será 6 metros (dobrou a altura na primavera seguinte)
+# E assim por diante...
+# Defina a função “altura_arvore_utopica”, que recebe a altura inicial da árvore utópica plantada no final do outono e a quantidade de ciclos de crescimento, e que retorne a altura resultante após a quantidade de ciclos de crescimento informada.
+# Valide a altura inicial (que não pode ser zero ou menor) e a quantidade de ciclos (que não pode ser negativo). Caso a validação falhar, a função deve retornar nil.
+
+def altura_arvore_utopica(altura_inicial, ciclos)
+    
+    altura = altura_inicial
+
+    if altura_inicial <= 0 || ciclos < 0
+        return nil
+    else 
+        if ciclos == 0
+            return altura_inicial
+        end
+        for i in (1..ciclos)
+            if i % 2 == 0   #par
+                altura  = altura + 1
+            
+            else                    #impar
+                altura = altura * 2
+            end
+        end
+        return altura
+    end
+end
+
 puts(altura_arvore_utopica(2, 5))
 # deve imprimir 22 
 # pois a altura da árvore iniciou com 2, após 1º ciclo foi para 4, 
