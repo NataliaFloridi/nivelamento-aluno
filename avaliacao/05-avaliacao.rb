@@ -24,21 +24,6 @@ def calcula_pi(termos)
 
 end
 
-# ef calcula_pi(termos)
-#     if termos>=1
-#         resultado=4/1.0
-#         for x in (1..termos-1)
-#             if x%2!=0
-#                 resultado= resultado - 4.0/(1+(x*2))
-#             else
-#                 resultado= resultado + 4.0/(1+(x*2))
-#             end
-#         end
-#         return resultado
-#     else
-#         return nil
-#     end
-# end
 puts(calcula_pi(4))
 # deve retornar o valor de (4/1 - 4/3 + 4/5 - 4/7), ou seja, 2.8952380952380956
 # note que a expressão tem 4 termos, pois 4 foi o número de termos informado no parâmetro.
