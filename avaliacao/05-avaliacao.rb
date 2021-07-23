@@ -15,7 +15,7 @@ def calcula_pi(termos)
             if i % 2 == 0      #par
               next
             else                    #impar
-                resultado =  termos / i
+                resultado =  4 / i
             end
             i = i + 1
         end

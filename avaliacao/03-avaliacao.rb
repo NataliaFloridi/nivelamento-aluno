@@ -9,6 +9,8 @@ def altura_escada(altura)
         for i in (1..altura)
             array[i] = "_" * (altura - 1) + "#" * i
             altura = altura - 1
+            # array[i] = "_" * (altura - i) + "#" * i
+            # i + 1
         end
         return array
     else
